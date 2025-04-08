@@ -50,7 +50,7 @@ namespace iamtiredofthishw
         {
             if (num2 == 0)
             {
-                throw new DivideByZeroException("Деление на ноль запрещено!!");
+                throw new DivideByZeroException("you can't divide any number by 0");
             }
             return new Money(num1.Sum / num2);
         }
@@ -64,9 +64,9 @@ namespace iamtiredofthishw
 
         public static Money operator-- (Money num)
         {
+            
             return new Money(num.Sum - 0.1);
         }
-
 
 
         public static bool operator> (Money num1, Money num2)
@@ -93,5 +93,12 @@ namespace iamtiredofthishw
         {
             Sum = sum;
         }
+
+        public bool IsNegative()
+        {
+            return Sum < 0;
+        }
+
+
     }
 }
