@@ -38,7 +38,7 @@ namespace iamtiredofthishw
             Money res = num1 - num2;
             return res;
         }
-
+         
 
 
         public static Money operator* (Money num1, int num2)
